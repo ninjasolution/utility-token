@@ -19,12 +19,9 @@ describe("DREToken", function () {
     const { factory, router, weth9 } = await UniswapV2Deployer.deploy(deployer);
 
     // deploy our token
-    const Token = await ethers.getContractFactory("DREX")
-    const token = await Token.deploy(router.address, fund.address)
+    const Token = await ethers.getContractFactory("ITR")
+    const token = await Token.deploy()
     await token.deployed()
-
-    // get our pair
-    const pair = new ethers.Contract(await token.uniswapV2Pair(), UniswapV2Deployer.Interface.IUniswapV2Pair.abi)
 
     // approve the spending
     await weth9.approve(router.address, eth(1000))
@@ -41,7 +38,7 @@ describe("DREToken", function () {
       { value: eth(10) }
     )
 
-    return { token, deployer, fund, target, factory, router, weth9, pair }
+    return { token, deployer, fund, target, factory, router, weth9 }
   }
 
   describe("transfer", function () {

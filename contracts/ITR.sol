@@ -10,9 +10,9 @@ import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 import '@uniswap/v2-periphery/contracts/interfaces/IUniswapV2Router02.sol';
 import '@uniswap/v2-core/contracts/interfaces/IUniswapV2Factory.sol';
 
-contract DREX is ERC20, Ownable, Pausable  {
+contract ITR is ERC20, Ownable, Pausable  {
  
-    constructor() ERC20("Dean Real Estate Utility Token", "DREX") {
+    constructor() ERC20("Interest Tax Rent", "ITR") {
  
         _mint(msg.sender, 100000000 * 10 ** 18);
     }

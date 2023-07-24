@@ -6,6 +6,11 @@
   "repository": "https://github.com/ninjasolution/utility-token.git",
   "author": "Ninja Solution",
   "license": "MIT",
+  "scripts": {
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat run scripts/deploy.js --network fuji",
+    "compile": "npx hardhat compile"
+  },
   "devDependencies": {
     "@ethersproject/abi": "^5.4.7",
     "@ethersproject/providers": "^5.4.7",

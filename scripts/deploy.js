@@ -8,7 +8,7 @@ const { ethers } = require("hardhat");
 
 async function main() {
 
-  const Token = await hre.ethers.getContractFactory("DREX");
+  const Token = await hre.ethers.getContractFactory("ITR");
   const token = await Token.deploy()
   console.log("Post deployed to:", token.address);
   
