@@ -7,18 +7,14 @@
 const { ethers } = require("hardhat");
 
 async function main() {
-  
-  let router = "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D";
-  let vault = "0x7B7887059860a1A21f3C62542B6CE5c0a23c76d5";
-  
 
   const Token = await hre.ethers.getContractFactory("DREX");
-  const token = await Token.deploy(router, vault)
+  const token = await Token.deploy()
   console.log("Post deployed to:", token.address);
   
   await hre.run("verify:verify", {
     address: token.address,
-    constructorArguments: [router, vault],
+    constructorArguments: [],
   });
 
   
