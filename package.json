@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "test": "npx hardhat test",
-    "deploy": "npx hardhat run scripts/deploy.js --network fuji",
+    "deploy": "npx hardhat run scripts/deploy.js --network goerli",
     "compile": "npx hardhat compile"
   },
   "devDependencies": {

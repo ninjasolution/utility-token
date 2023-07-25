@@ -10,7 +10,7 @@ async function main() {
 
   const Token = await hre.ethers.getContractFactory("ITR");
   const token = await Token.deploy()
-  console.log("Post deployed to:", token.address);
+  console.log("ITR deployed to:", token.address);
   
   await hre.run("verify:verify", {
     address: token.address,

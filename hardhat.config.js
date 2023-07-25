@@ -6,13 +6,16 @@ require('dotenv').config();
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY
 const etherscanKey = process.env.ETHERSCAN_KEY
+const infraKey = process.env.INFRA_KEY
 
 module.exports = {
   defaultNetwork: "hardhat",
   networks: {
-    bsctest: {
-      url: "https://data-seed-prebsc-1-s1.binance.org:8545/",
-      accounts: [PRIVATE_KEY]
+    mainnet: {
+      url: `https://mainnet.infura.io/v3/${infraKey}`,
+      accounts: [PRIVATE_KEY],
+      //gasPrice: 120 * 1000000000,
+      chainId: 1,
     },
     fuji: {
       url: "https://api.avax-test.network/ext/bc/C/rpc",
@@ -22,7 +25,7 @@ module.exports = {
       
     },
     goerli: {
-      url: "https://eth-goerli.alchemyapi.io/v2/123abc123abc123abc123abc123abcde",
+      url: `https://goerli.infura.io/v3/${infraKey}`,
       accounts: [PRIVATE_KEY]
     },
     localhost: {
