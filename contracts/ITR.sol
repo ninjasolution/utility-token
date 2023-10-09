@@ -4,10 +4,9 @@
 pragma solidity ^0.8.0;
  
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract ITR is ERC20, Ownable, Pausable  {
+contract ITR is ERC20, Ownable  {
  
     constructor() ERC20("Interest Tax Rent", "ITR") {
  
