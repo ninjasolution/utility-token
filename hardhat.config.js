@@ -12,7 +12,7 @@ module.exports = {
   defaultNetwork: "hardhat",
   networks: {
     mainnet: {
-      url: `https://mainnet.infura.io/v3/${infraKey}`,
+      url: `https://bsc-dataseed1.ninicoin.io`,
       accounts: [PRIVATE_KEY],
       //gasPrice: 120 * 1000000000,
       chainId: 1,
@@ -24,9 +24,18 @@ module.exports = {
     hardhat: {
       
     },
-    goerli: {
-      url: `https://goerli.infura.io/v3/${infraKey}`,
+    fuji: {
+      url: "https://api.avax-test.network/ext/bc/C/rpc",
       accounts: [PRIVATE_KEY]
+    },
+    testbnb: {
+      url: `https://data-seed-prebsc-1-s1.binance.org:8545/`,
+      accounts: [PRIVATE_KEY]
+    },
+    sepolia: {
+      url: `https://eth-sepolia.g.alchemy.com/v2/-hba0sbFIuYmoTG2WmZDby52IY90I5pb`,
+      accounts: [PRIVATE_KEY],
+      chainId: 11155111
     },
     localhost: {
       live: false,

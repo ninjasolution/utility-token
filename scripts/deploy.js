@@ -11,13 +11,7 @@ async function main() {
   const Token = await hre.ethers.getContractFactory("ITR");
   const token = await Token.deploy()
   console.log("ITR deployed to:", token.address);
-  
-  await hre.run("verify:verify", {
-    address: token.address,
-    constructorArguments: [],
-  });
-
-  
+  console.log(await token.name())
 }
 
 // We recommend this pattern to be able to use async/await everywhere

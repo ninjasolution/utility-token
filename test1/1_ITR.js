@@ -7,7 +7,7 @@ function eth(amount) {
   return ethers.utils.parseEther(amount.toString())
 }
 
-describe("DREToken", function () {
+describe("ITR", function () {
 
   let token, governace;
   let deployer, target, fund;
